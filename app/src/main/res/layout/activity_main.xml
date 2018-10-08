@@ -1,0 +1,134 @@
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+
+     <TextView
+         android:id="@+id/calculator"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Calculator"
+         android:textColor="@color/darkgreen"
+         android:background="@color/green"
+         android:gravity="center"
+         android:textSize="30dp"
+         android:textStyle="bold"/>
+
+     <LinearLayout
+     android:id="@+id/khung_num_a"
+     android:layout_below="@+id/calculator"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:weightSum="4">
+
+     <TextView
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:text="Number A : "
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         android:layout_weight="1"
+         android:gravity="center"/>
+     <EditText
+         android:id="@+id/edt_a"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         android:layout_weight="3" />
+ </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/khung_num_b"
+         android:layout_below="@+id/khung_num_a"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:weightSum="4">
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="Number B : "
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:layout_weight="1"
+             android:gravity="center" />
+         <EditText
+             android:id="@+id/edt_b"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:layout_weight="3"
+             />
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/phep_tinh"
+         android:layout_below="@+id/khung_num_b"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:weightSum="5">
+         <Button
+             android:id="@+id/cong"
+             android:onClick="btnCong"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="+"
+             android:layout_weight="1"/>
+         <Button
+             android:id="@+id/tru"
+             android:onClick="btnTru"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="-"
+             android:layout_weight="1"/>
+         <Button
+             android:id="@+id/nhan"
+             android:onClick="btnNhan"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="*"
+             android:layout_weight="1"/>
+         <Button
+             android:id="@+id/chia"
+             android:onClick="btnChia"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="/"
+             android:layout_weight="1"/>
+         <Button
+             android:id="@+id/clear"
+             android:onClick="btnClear"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="Clear"
+             android:layout_weight="1"/>
+
+     </LinearLayout>
+
+     <TextView
+         android:id="@+id/edt_result"
+         android:layout_below="@+id/phep_tinh"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:background="@color/green"
+         android:textStyle="bold"
+         android:gravity="center"
+         android:textColor="@color/white"
+         android:textSize="30dp">
+
+     </TextView>
+
+     <ListView
+         android:id="@+id/history"
+         android:layout_below="@id/edt_result"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+
+ </RelativeLayout>
